@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <title>IMC</title>
 </head>
+
 <body>
 
     <section>
         <h1>Calcule IMC (Indice de Massa Corporal)</h1>
         <article>
-        <h3>IMC Obtido</h3>
+            <h3>IMC Obtido</h3>
             <p>Menos do que 18,5</p>
             <p>Entre 18,5 e 24,9</p>
             <p>Entre 25 e 29,9</p>
@@ -23,7 +26,7 @@
             <p>Entre 35 e 39,9</p>
             <p>Mais do que 40</p>
 
-        <h3>Resultado</h3>
+            <h3>Resultado</h3>
             <p>Abaixo do Peso</p>
             <p>Peso Normal</p>
             <p>Sobrepeso</p>
@@ -33,9 +36,20 @@
         </article>
 
         <h3>Calcule seu IMC</h3>
-
-
+        <form action="/" id="form" method="post">
+            <p><label for="ipeso">Peso:</label></p>
+            <input type="number" name="peso" id="ipeso" placeholder="(Ex: 50.5)" pattern="[0-9]+([,\.][0-9]+)?" min="0"
+                step="any" autocomplete="off">
+            <p><label for="ialtura">Altura:</label></p>
+            <input type="number" name="altura" id="ialtura" placeholder="(Ex: 1.70)" pattern="[0-9]+([,\.][0-9]+)?"
+                min="0" step="any" autocomplete="off"> <br>
+            <input id="botao" type="submit" value="Calcular">
+        </form>
+        <div id="res"></div>
     </section>
+    <footer><a href="https://www.linkedin.com/in/juliocesar1993/" target="_blank">@Julio Cesar - Linkdin</a></footer>
 
-    </body>
+    <script src="imc.js"></script>
+</body>
+
 </html>
